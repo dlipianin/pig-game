@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pig Game</title>
+  <link rel="icon" href="images/dice.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/4fbfd74206.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <header>
+      <h1 class="header-title">Pig game</h1>
+    </header>
+
+    <main>
+      <section id="left" class="player player--0 player--active">
+        <h1 class="name" id="name--0">Player 1</h1>
+        <h2 class="score" id="score--0">42</h2>
+        <div class="current rounded">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+        <p id="games--0" class="games-won">Games won: 0</p>
+      </section>
+
+      <section id="right" class="player player--1">
+        <h1 class="name" id="name--1">Player 2</h1>
+        <h2 class="score" id="score--1">72</h2>
+        <div class="current rounded">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+        <p id="games--1" class="games-won">Games won: 0</p>
+      </section>
+
+      <img src="images/dice-5.png" alt="Playing dice" class="dice img-fluid rounded" />
+      <button class="btn btn-light btn-sm btn-new"><i class="fa-solid fa-circle-plus fa-flip"></i> New game</button>
+      <button class="btn btn-light btn-sm btn-rules" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-book-open fa-shake"></i> Rules</button>
+      <button class="btn btn-light btn-sm btn-roll"><i class="fa-solid fa-arrows-rotate fa-spin"></i> Roll dice</button>
+      <button class="btn btn-light btn-sm btn-hold"><i class="fa-solid fa-circle-arrow-down fa-beat"></i> Hold</button>
+
+    </main>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h4 id="offcanvasRightLabel" class="offcanvas-title">Rules</h4>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <h5>You don't know how to play? Don't worry! Read the following instructions and have fun!</h5>
+        <ul class="offcanvas-ul">
+          <li>Roll the dice and <strong>add the number to your current score</strong>. You can either:</li>
+          <ul>
+            <li><strong>Keep rolling</strong>, adding new points to your current score</li>
+            <li><strong>Hold</strong>, adding your points to your total score</li>
+          </ul>
+          <li>If you roll a <strong>one (1)</strong>, you lose all your current points</li>
+          <li>Who first reaches <strong>100 points</strong>, wins the game</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <a href="https://www.facebook.com/people/Diana-DEstefano/100012558701947/" target="_blank"><i class="fa-brands fa-facebook-square footer-img"></i></a>
+    <a href="https://www.instagram.com/destefanodiana99/?r=nametag" target="_blank"><i class="fa-brands fa-instagram-square footer-img"></i></a>
+    <a href="https://www.linkedin.com/in/diana-d%E2%80%99estefano-118367174/" target="_blank"><i class="fa-brands fa-linkedin footer-img"></i></a>
+    <a href="https://github.com/dlipianin" target="_blank"><i class="fa-brands fa-github-square footer-img"></i></a>
+    <p class="p-footer">Diana D'Estefano. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>

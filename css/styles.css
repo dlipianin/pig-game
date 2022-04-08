@@ -1,0 +1,285 @@
+/* GENERAL STYLES */
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  text-align: center;
+  font-family: "Lato";
+  background-color: #F9F9F9;
+  margin: 5%;
+}
+
+main {
+  position: relative;
+  background-color: #DFDFDE;
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+  height: 100%;
+  text-transform: uppercase;
+}
+
+footer {
+  font-size: 1.5vw;
+  text-transform: uppercase;
+}
+
+#left {
+  float: left;
+  width: 50%;
+}
+
+#right {
+  float: right;
+  width: 50%;
+}
+
+.header-title {
+  font-size: 6vw;
+  color: #EF4B4B;
+  margin-bottom: 5%;
+  text-transform: uppercase;
+}
+
+.player {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+.name {
+  font-weight: 300;
+  margin: 40% 0 30%;
+  font-size: 7vw;
+}
+
+.score {
+  font-size: 8vw;
+  font-weight: 100;
+  color: #EF4B4B;
+  margin-bottom: 70%;
+}
+
+.games-won {
+  font-size: 2vw;
+}
+
+.current {
+  background-color: #EF4B4B;
+  color: #F4F4F4;
+  margin-bottom: 10%;
+  width: 50%;
+}
+
+.current-label {
+  color: #41444B;
+  font-size: 2vw;
+  margin-top: 10%;
+}
+
+.current-score {
+  font-size: 4vw;
+}
+
+.p-footer {
+  padding-bottom: 3%;
+}
+
+.hidden {
+  display: none;
+}
+
+/* BUTTONS STYLES */
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  font-size: 2vw;
+  font-family: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 300;
+  transition: all 0.2s;
+}
+
+.btn-new {
+  height: auto;
+  margin-top: 2%;
+}
+
+.btn-rules {
+  height: auto;
+  margin-top: 10%;
+}
+
+.btn-roll {
+  height: auto;
+  margin-top: 95%;
+}
+
+.btn-hold {
+  height: auto;
+  margin-top: 105%;
+}
+
+/* IMAGES STYLES */
+
+.dice {
+  position: absolute;
+  left: 50%;
+  height: auto;
+  margin-top: 65%;
+  transform: translateX(-50%);
+  width: 15%;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.fa-circle-plus, .fa-book-open, .fa-arrows-rotate, .fa-circle-arrow-down{
+  color: #EF4B4B;
+}
+
+.footer-img {
+  color: #EF4B4B;
+  margin: 10% 1% 2%;
+}
+
+.footer-img:hover {
+  color: #C74B50;
+}
+
+/* OFFCANVAS STYLES */
+
+strong {
+  color: #C74B50;
+}
+
+ul {
+  list-style-type: "🎲 ";
+}
+
+li {
+  padding-bottom: 5%;
+}
+
+.offcanvas-ul {
+  padding: 5% 0 0 5%;
+}
+
+.offcanvas {
+  background-color: #F4F4F4;
+  text-align: justify;
+}
+
+.offcanvas-title {
+  text-transform: uppercase;
+}
+
+/* PLAYER ACTIVE STYLES */
+
+.player--active {
+  background-color: #F9F9F9;
+}
+
+.player--active .name {
+  font-weight: 700;
+}
+
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .games-won {
+  font-weight: 700;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+/* PLAYER WINNER STYLES */
+
+.player--winner {
+  background-color: #423F3E;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #F4F4F4;
+}
+
+.player--winner .score {
+  font-weight: 300;
+}
+
+.player--winner .games-won {
+  font-weight: 700;
+  color: #F4F4F4;
+}
+
+/* RESPONSIVE STYLES */
+
+@media (max-width: 280px) {
+  .btn-new {
+    height: auto;
+    margin-top: 2%;
+    font-size: 1.5vw;
+  }
+  .btn-rules {
+    height: auto;
+    margin-top: 12%;
+    font-size: 1.5vw;
+  }
+  .btn-roll {
+    height: auto;
+    margin-top: 97%;
+    font-size: 1.5vw;
+  }
+  .btn-hold {
+    height: auto;
+    margin-top: 107%;
+    font-size: 1.5vw;
+  }
+}
+
+@media (min-width: 476px) and (max-width: 576px){
+  .btn-roll {
+    height: auto;
+    margin-top: 94%;
+  }
+  .btn-hold {
+    height: auto;
+    margin-top: 102%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 1024px){
+  .btn-roll {
+    height: auto;
+    margin-top: 93%;
+  }
+  .btn-hold {
+    height: auto;
+    margin-top: 102%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .btn-roll {
+    height: auto;
+    margin-top: 92%;
+  }
+  .btn-hold {
+    height: auto;
+    margin-top: 100%;
+  }
+}
