@@ -155,10 +155,10 @@ btnRoll.addEventListener('click', function() {
       currentScore += dice;
       document.getElementById(`current--${activePlayer}`).textContent = currentScore;
       // if current score is >= 100
-      if (currentScore >= 20) {
+      if (currentScore >= 100) {
         document.getElementById(`score--${activePlayer}`).textContent = currentScore;
         winnerPlayer();
-      } else if (currentScore + scores[activePlayer] >= 20) {
+      } else if (currentScore + scores[activePlayer] >= 100) {
         // else if current score + score is >= 100
         document.getElementById(`score--${activePlayer}`).textContent = currentScore + scores[activePlayer];
         winnerPlayer();
@@ -177,7 +177,7 @@ btnHold.addEventListener('click', function() {
     scores[activePlayer] += currentScore;
     document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
     // check if player's score is >= 100
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       // finish the game
       playing = false;
       newBtnAdd();
